@@ -355,7 +355,7 @@ impl<'d, T: GeneralInstance4Channel> SimplePwm<'d, T> {
                 &mut dma,
                 req,
                 duty,
-                self.inner.regs_gp16().dmar().as_ptr() as *mut _,
+                self.inner.regs_gp16().dmar().as_ptr() as *mut u16,
                 dma_transfer_option,
             )
             .await
